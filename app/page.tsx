@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -17,8 +18,8 @@ interface Location {
 interface MarineWeather {
   time: string;
   interval: number;
-  wave_height: number;
-  sea_surface_temperature: number;
+  wave_height: number | null;
+  sea_surface_temperature: number | null;
 }
 
 export default function Home() {
@@ -98,6 +99,13 @@ export default function Home() {
     return date.toLocaleString();
   };
 
+  // Check if location is in France
+  const isLocationInFrance = selectedLocation?.country === "France";
+
+  // Check if marine data is missing
+  const hasNoMarineData = weatherData && 
+    (weatherData.wave_height === null || weatherData.sea_surface_temperature === null);
+
   return (
     <div className="min-h-screen p-8 max-w-4xl mx-auto">
       <div className="flex flex-col items-center gap-6">
@@ -143,7 +151,35 @@ export default function Home() {
               {weatherError && (
                 <p className="text-destructive">{weatherError}</p>
               )}
-              {weatherData && (
+              
+              {/* Display a location-specific message when no marine data is available */}
+              {hasNoMarineData && isLocationInFrance ? (
+                <div className="flex flex-col items-center text-center p-4 space-y-4">
+                  <Image 
+                    src="/baguette.svg"
+                    alt="French baguette"
+                    width={170}
+                    height={170}
+                    className="opacity-90"
+                  />
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-medium">Too bad! No surf, have a baguette instead mon amis 😃</h3>
+                  </div>
+                </div>
+              ) : hasNoMarineData ? (
+                <div className="flex flex-col items-center text-center p-4 space-y-4">
+                  <Image 
+                    src="/bbq.svg"
+                    alt="BBQ grill"
+                    width={170}
+                    height={170}
+                    className="opacity-90"
+                  />
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-medium">Too bad! No surf, have a BBQ instead dude! :)</h3>
+                  </div>
+                </div>
+              ) : weatherData && (
                 <div className="space-y-4">
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Time of measurement</p>

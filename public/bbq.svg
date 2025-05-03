@@ -1,0 +1,50 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- BBQ Base -->
+  <rect x="40" y="130" width="120" height="20" rx="5" fill="#555555" stroke="#333333" stroke-width="2"/>
+  <rect x="50" y="150" width="100" height="10" rx="2" fill="#444444"/>
+  
+  <!-- BBQ Legs -->
+  <rect x="60" y="150" width="8" height="30" rx="2" fill="#555555"/>
+  <rect x="132" y="150" width="8" height="30" rx="2" fill="#555555"/>
+  
+  <!-- Grill -->
+  <circle cx="100" cy="90" r="40" fill="#444444" stroke="#333333" stroke-width="2"/>
+  <circle cx="100" cy="90" r="35" fill="#333333"/>
+  
+  <!-- Grill Lines -->
+  <line x1="70" y1="90" x2="130" y2="90" stroke="#666666" stroke-width="2"/>
+  <line x1="75" y1="80" x2="125" y2="80" stroke="#666666" stroke-width="2"/>
+  <line x1="75" y1="100" x2="125" y2="100" stroke="#666666" stroke-width="2"/>
+  <line x1="85" y1="70" x2="115" y2="70" stroke="#666666" stroke-width="2"/>
+  <line x1="85" y1="110" x2="115" y2="110" stroke="#666666" stroke-width="2"/>
+  
+  <!-- Flames -->
+  <path d="M90 95C90 95 85 85 90 75C95 65 90 60 90 60C90 60 100 70 100 80C100 90 95 90 95 95" fill="#FF6B35"/>
+  <path d="M105 95C105 95 100 85 105 75C110 65 105 60 105 60C105 60 115 70 115 80C115 90 110 90 110 95" fill="#FF6B35"/>
+  
+  <!-- Lid -->
+  <path d="M60 60C60 60 100 40 140 60" stroke="#333333" stroke-width="3"/>
+  <path d="M70 62L130 62" stroke="#444444" stroke-width="3"/>
+
+  <!-- Handle -->
+  <rect x="95" y="45" width="10" height="5" rx="2" fill="#333333"/>
+  
+  <!-- Smoke -->
+  <path d="M85 30C85 30 80 25 85 20C90 15 85 10 80 5" stroke="#BBBBBB" stroke-width="2" stroke-linecap="round"/>
+  <path d="M100 35C100 35 95 30 100 25C105 20 100 15 95 10" stroke="#BBBBBB" stroke-width="2" stroke-linecap="round"/>
+  <path d="M115 30C115 30 110 25 115 20C120 15 115 10 110 5" stroke="#BBBBBB" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Sausage -->
+  <path d="M75 85C75 85 85 80 95 85C105 90 115 85 115 85" stroke="#D35400" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Sun -->
+  <circle cx="160" cy="40" r="15" fill="#FFD700"/>
+  <line x1="160" y1="15" x2="160" y2="20" stroke="#FFD700" stroke-width="2"/>
+  <line x1="160" y1="60" x2="160" y2="65" stroke="#FFD700" stroke-width="2"/>
+  <line x1="135" y1="40" x2="140" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="180" y1="40" x2="185" y2="40" stroke="#FFD700" stroke-width="2"/>
+  <line x1="143" y1="23" x2="147" y2="27" stroke="#FFD700" stroke-width="2"/>
+  <line x1="173" y1="53" x2="177" y2="57" stroke="#FFD700" stroke-width="2"/>
+  <line x1="143" y1="57" x2="147" y2="53" stroke="#FFD700" stroke-width="2"/>
+  <line x1="173" y1="27" x2="177" y2="23" stroke="#FFD700" stroke-width="2"/>
+</svg>
