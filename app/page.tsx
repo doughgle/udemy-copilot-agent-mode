@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { getCountryFlag } from "@/lib/countryFlags";
 
 interface Location {
   id: number;
@@ -143,7 +144,7 @@ export default function Home() {
                 {weatherLoading && <span className="text-sm font-normal">Loading...</span>}
               </CardTitle>
               <CardDescription>
-                {selectedLocation.name}, {selectedLocation.country} 
+                {selectedLocation.name}, {getCountryFlag(selectedLocation.country)} {selectedLocation.country} 
                 {selectedLocation.admin1 ? ` (${selectedLocation.admin1})` : ""}
               </CardDescription>
             </CardHeader>
@@ -218,7 +219,9 @@ export default function Home() {
                 >
                   <CardHeader>
                     <CardTitle>{location.name}</CardTitle>
-                    <CardDescription>{location.country} {location.admin1 ? `(${location.admin1})` : ""}</CardDescription>
+                    <CardDescription>
+                      {getCountryFlag(location.country)} {location.country} {location.admin1 ? `(${location.admin1})` : ""}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
